@@ -6,5 +6,23 @@
 }
 
 .pokemonCard {
-    background-color: #eee;
+  background-color: #eee;
+}
+
+.pokeHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 55px;
+  padding-right: 15px;
+}
+
+.pokeTitle {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 50px;
 }

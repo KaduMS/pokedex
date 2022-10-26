@@ -10,5 +10,7 @@
     margin: 10px;
     border-top: 5px solid #fcdc4d;
     border-bottom: 5px solid #fcdc4d;
+    border-left: 1px solid #fcdc4d;
+    border-right: 1px solid #fcdc4d;
     align-items: center;
 }
