@@ -10,22 +10,23 @@ export class PokemonCardComponent {
   pokemon!: string;
 
   @Input()
+  pokeId!: number;
+
+  @Input()
   image!: string
-  // @Input()
-  // num!: number;
 
-  // getImagePokemon() {
-  //   const formatedNumber = this.leadingZero(this.num);
+  getPokeId(pokeId: number) {
+    const formatedNumber = this.leadingZero(this.pokeId);
 
-  //   return `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${formatedNumber}.png`;
-  // }
+    return formatedNumber;
+  }
 
-  // leadingZero(str: string | number, size = 3): string {
-  //   let s = String(str);
+  leadingZero(str: string | number, size = 3): string {
+    let s = String(str);
 
-  //   while (s.length < (size || 2)) {
-  //     s = '0' + s;
-  //   }
-  //   return s;
-  // }
+    while (s.length < (size || 2)) {
+      s = '0' + s;
+    }
+    return s;
+  }
 }
