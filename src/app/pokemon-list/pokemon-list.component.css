@@ -16,15 +16,17 @@
   width: 80%;
   margin: auto;
   display: block;
-  background-color: #f2f2f2;
+  background-color: rgb(31, 34, 35);
   border-radius: 8px;
-  height: 32px;
+  height: 48px;
+  font-size: 18px;
   border-width: inherit;
   border-color: inherit;
+  margin-bottom: 10px;
 }
 
 .inputSearch:focus-visible {
-  outline: rgb(108, 108, 108) auto 1px;;
+  outline: rgb(61, 64, 65) auto 1px;
 }
 
 .pokeHeader img {
@@ -36,4 +38,5 @@
   font-family: "Poppins", sans-serif;
   text-align: center;
   font-size: 50px;
+  color: #E8E6E3;
 }
