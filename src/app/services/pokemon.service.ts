@@ -12,7 +12,7 @@ export class PokemonService {
   //   this.loadingPokemons();
   // }
 
-  private url: string = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=21'
+  private url: string = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151'
 
   constructor(
     private http: HttpClient
