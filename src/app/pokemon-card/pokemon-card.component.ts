@@ -13,7 +13,10 @@ export class PokemonCardComponent {
   pokeId!: number;
 
   @Input()
-  image!: string
+  pokeType!: any;
+
+  @Input()
+  image!: string;
 
   getPokeId(pokeId: number) {
     const formatedNumber = this.leadingZero(this.pokeId);

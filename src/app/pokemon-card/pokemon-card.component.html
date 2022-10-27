@@ -1,6 +1,14 @@
 <div class="pokemonCard">
-  <img src='{{ image }}' />
-  <b class="pokeId">Nº {{getPokeId(pokeId)}}</b><br/>
-  
-  <b class="pokeName">{{ pokemon }}</b>
+  <img src="{{ image }}" />
+  <div>
+    <b class="pokeId">Nº {{ getPokeId(pokeId) }}</b
+    ><br />
+    <b class="pokeName">{{ pokemon }}</b
+    ><br />
+    <div *ngFor="let value of pokeType">
+      <span class="pokeType">
+        {{ value.type.name }}
+      </span>
+    </div>
+  </div>
 </div>
