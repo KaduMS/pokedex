@@ -1,11 +1,16 @@
 <div class="pokeHeader">
   <img src="assets/Pokeball.svg" />
   <h1 class="pokeTitle">Pokédex</h1>
-  <div class="pokeSearch">
-    <form>
-      <input type="text" placeholder="Busque um Pokémon" />
-    </form>
-  </div>
+</div>
+<div class="pokeSearch">
+  <form>
+    <input
+      class="inputSearch"
+      type="text"
+      placeholder="Busque um Pokémon"
+      (input)="search($event)"
+    />
+  </form>
 </div>
 <div class="pokemonList">
   <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
@@ -20,4 +25,3 @@
     </a>
   </ng-template>
 </div>
-<!-- <div *ngFor="let pokemon of pokemons">Pokemon: {{ pokemon }}</div> -->

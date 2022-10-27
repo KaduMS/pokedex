@@ -12,6 +12,21 @@
   align-items: center;
 }
 
+.inputSearch {
+  width: 80%;
+  margin: auto;
+  display: block;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  height: 32px;
+  border-width: inherit;
+  border-color: inherit;
+}
+
+.inputSearch:focus-visible {
+  outline: rgb(108, 108, 108) auto 1px;;
+}
+
 .pokeHeader img {
   height: 55px;
   padding-right: 15px;

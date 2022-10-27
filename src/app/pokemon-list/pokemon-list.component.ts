@@ -10,24 +10,26 @@ import { Pokemon } from '../types/pokemon.type';
 })
 export class PokemonListComponent {
   faSearch = faSearch;
+  private setAllPokemons: any;
   public getAllPokemons: any;
   constructor(public pokemonService: PokemonService) {}
 
   ngOnInit(): void {
     this.pokemonService.apiListAllPokemons.subscribe((res) => {
-      this.getAllPokemons = res.results;
+      this.setAllPokemons = res.results;
+      this.getAllPokemons = this.setAllPokemons;
       console.log(this.getAllPokemons);
     });
   }
 
-  // search(e: Event): void {
-  //   const target = e.target as HTMLInputElement;
-  //   const value = target.value;
+  search(e: Event): void {
+    const target = e.target as HTMLInputElement;
+    const value = target.value;
 
-  //   const filter = this.pokemonService.pokemons.filter((res) => {
-  //     return !res.name.indexOf(value.toLocaleLowerCase());
-  //   });
+    const filter = this.setAllPokemons.filter((res: any) => {
+      return !res.name.indexOf(value.toLocaleLowerCase());
+    });
 
-  //   this.pokemonService.pokemons = filter;
-  // }
+    this.getAllPokemons = filter;
+  }
 }
