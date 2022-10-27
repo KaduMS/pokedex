@@ -1,36 +1,45 @@
 .pokemonCard {
-    width: 265px;
-    height: 290px;
-    background-color: rgb(31, 34, 35);
-    border: 1px solid #c5c5c5;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
-    border-color: rgba(223, 225, 229, 0);
-    margin: 10px;
-    border-top: 5px solid #fcdc4d;
-    border-bottom: 5px solid #fcdc4d;
-    border-left: 1px solid #fcdc4d;
-    border-right: 1px solid #fcdc4d;
-    
+  width: 265px;
+  height: 290px;
+  background-color: rgb(31, 34, 35);
+  border: 1px solid #c5c5c5;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  border-color: rgba(223, 225, 229, 0);
+  margin: 10px;
+  border-top: 5px solid #fcdc4d;
+  border-bottom: 5px solid #fcdc4d;
+  border-left: 1px solid #fcdc4d;
+  border-right: 1px solid #fcdc4d;
+}
+
+@media (max-width: 500px) {
+  .pokemonCard {
+    transition: all ease 0.4s;
+  }
+  .pokemonCard:hover {
+    transform: scale(1.08, 1.08);
+    transition: all ease 0.4s;
+  }
 }
 
 .pokemonCard img {
-    width: 215px;
-    height: 215px;
-    margin: auto auto 25px auto;
-    display: block;
+  width: 215px;
+  height: 215px;
+  margin: auto auto 25px auto;
+  display: block;
 }
 
 .pokeId {
-    font-family: "Poppins", sans-serif;
-    color: rgb(200, 195, 188);
-    font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(200, 195, 188);
+  font-size: 12px;
 }
 
 .pokeName {
-    text-transform: capitalize;
-    font-family: "Poppins", sans-serif;
-    color: rgb(200, 195, 188);
-    font-size: 20px;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  color: rgb(200, 195, 188);
+  font-size: 20px;
 }
