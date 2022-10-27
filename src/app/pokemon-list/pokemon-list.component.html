@@ -1,12 +1,20 @@
 <div class="pokeHeader">
   <img src="assets/Pokeball.svg" />
   <h1 class="pokeTitle">Pokédex</h1>
+  <div class="pokeSearch">
+    <form>
+      <input type="text" placeholder="Busque um Pokémon" />
+    </form>
+  </div>
 </div>
-<div class="pokemonList">
-  <app-pokemon-card
-    *ngFor="let pokemon of pokemonService.pokemons; index as i"
-    [pokemon]="pokemon.name"
-    [num]="i + 1"
-  ></app-pokemon-card>
-</div>
+<ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
+  <div class="pokemonList">
+    <a *ngIf="pokemon.status">
+      <app-pokemon-card
+        [pokemon]="pokemon.name"
+        [image]="pokemon.status.sprites.other.dream_world.front_default"
+      ></app-pokemon-card>
+    </a>
+  </div>
+</ng-template>
 <!-- <div *ngFor="let pokemon of pokemons">Pokemon: {{ pokemon }}</div> -->
