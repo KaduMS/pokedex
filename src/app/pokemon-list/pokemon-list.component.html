@@ -7,14 +7,16 @@
     </form>
   </div>
 </div>
-<ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
-  <div class="pokemonList">
+<div class="pokemonList">
+  <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
     <a *ngIf="pokemon.status">
-      <app-pokemon-card
-        [pokemon]="pokemon.name"
-        [image]="pokemon.status.sprites.other.dream_world.front_default"
-      ></app-pokemon-card>
+      <div>
+        <app-pokemon-card
+          [pokemon]="pokemon.name"
+          [image]="pokemon.status.sprites.other.dream_world.front_default"
+        ></app-pokemon-card>
+      </div>
     </a>
-  </div>
-</ng-template>
+  </ng-template>
+</div>
 <!-- <div *ngFor="let pokemon of pokemons">Pokemon: {{ pokemon }}</div> -->

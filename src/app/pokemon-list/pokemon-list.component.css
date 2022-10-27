@@ -5,10 +5,6 @@
   justify-content: space-evenly;
 }
 
-.pokemonCard {
-  background-color: #eee;
-}
-
 .pokeHeader {
   display: flex;
   flex-direction: row;
@@ -16,7 +12,7 @@
   align-items: center;
 }
 
-img {
+.pokeHeader img {
   height: 55px;
   padding-right: 15px;
 }
