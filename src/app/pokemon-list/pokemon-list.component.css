@@ -23,6 +23,7 @@
   border-width: inherit;
   border-color: inherit;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .inputSearch:focus-visible {
